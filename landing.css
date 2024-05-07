@@ -8,7 +8,8 @@
 
 body 
 {
-    background-color: honeydew;
+    background-color: rgb(6, 3, 42);
+    color: ghostwhite;
 }
 
 .header 
@@ -18,9 +19,160 @@ body
     left: 0;
     width: 100%;
     padding: 20px 10%;
-    background: aqua;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+}
+
+.logo 
+{
+    font-size: 25px;
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a 
+{
+    font-size: 18px;
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+}
+
+.navbar a:hover, .navbar a.current
+{
+    color: darkgoldenrod;
+}
+
+.home 
+{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding: 0 10%;
+}
+
+.home-content 
+{
+    background: transparent;
+    max-width: 600px;
+}
+
+.home-content h1 
+{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.0;
+    margin: 5px 0 20px;
+}
+
+.home-content h3 
+{
+    font-size: 32px;
+    font-weight: 700;
+    color: darkgoldenrod;
+}
+
+.home-content p 
+{
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content .btn-box 
+{
+    width: 1000px;
+    height: 45px;
+    background: transparent;
+    display: flex;
+}
+
+.btn-box a 
+{
+    width: 150px;
+    height: 95%;
+    background: darkgoldenrod;
+    border: 3px solid darkgoldenrod;
+    border-radius: 8px;
+    border-spacing: 5px;
+    font-size: 19px;
+    color: ghostwhite;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:nth-child(3), .btn-box a:nth-child(2) 
+{
+    background: transparent;
+    color: ghostwhite;
+}
+
+.btn-box a::before 
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgb(6, 3, 42);
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before 
+{
+    width: 100%;
+}
+
+.btn-box a:nth-child(2)::before, .btn-box a:nth-child(3)::before 
+{
+    background: darkgoldenrod;
+}
+
+.btn-box a:nth-child(2):hover, .btn-box a:nth-child(3):hover
+{
+    color: ghostwhite;
+}
+
+.btn-box a:hover 
+{
+    color: darkgoldenrod;
+}
+
+.home-socials 
+{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-socials a 
+{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid darkgoldenrod;
+    border-radius: 50%;
+    color: darkgoldenrod;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
 }
